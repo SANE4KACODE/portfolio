@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANE4KA | Trader & Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+    
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+    
+    <!-- Scanlines Effect -->
+    <div class="scanlines"></div>
+    
+    <!-- Vignette Effect -->
+    <div class="vignette"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">SANE4KA</span>
+                <div class="logo-glow"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Главная</a></li>
+                <li><a href="#about" class="nav-link">Обо мне</a></li>
+                <li><a href="#skills" class="nav-link">Навыки</a></li>
+                <li><a href="#projects" class="nav-link">Проекты</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="SANE4KA">SANE4KA</h1>
+            </div>
+            <div class="hero-subtitle">
+                <span class="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Трейдер | Разработчик | Инноватор
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <span>Мои работы</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Связаться</span>
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Листай вниз</span>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hologram-circle">
+                <div class="circle-ring ring-1"></div>
+                <div class="circle-ring ring-2"></div>
+                <div class="circle-ring ring-3"></div>
+                <div class="circle-center">
+                    <div class="trading-icon">
+                        <svg viewBox="0 0 100 100">
+                            <polyline points="10,70 30,50 50,60 70,30 90,40" fill="none" stroke="#00ffff" stroke-width="3"/>
+                            <circle cx="10" cy="70" r="4" fill="#00ffff"/>
+                            <circle cx="30" cy="50" r="4" fill="#ff00ff"/>
+                            <circle cx="50" cy="60" r="4" fill="#00ffff"/>
+                            <circle cx="70" cy="30" r="4" fill="#00ff00"/>
+                            <circle cx="90" cy="40" r="4" fill="#ff00ff"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-glow"></span>
+                Обо мне
+            </h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="frame-border"></div>
+                        <div class="avatar-placeholder">
+                            <span>S</span>
+                        </div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="float-element float-1">💻</div>
+                        <div class="float-element float-2">📈</div>
+                        <div class="float-element float-3">⚡</div>
+                        <div class="float-element float-4">🎯</div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3 class="about-heading">Александр <span class="highlight">SANE4KA</span></h3>
+                        <p class="about-paragraph">
+                            Привет! Я профессиональный трейдер и веб-разработчик с страстью к созданию 
+                            высокопроизводительных торговых систем и красивых веб-интерфейсов.
+                        </p>
+                        <p class="about-paragraph">
+                            В мире трейдинга я специализируюсь на анализе рынков и разработке 
+                            алгоритмических торговых стратегий. В свободное время пишу на C++, 
+                            создавая производительные решения для автоматизации торговли.
+                        </p>
+                        <p class="about-paragraph">
+                            Моя миссия — объединить финансовую экспертизу с передовыми технологиями 
+                            веб-разработки для создания инструментов будущего.
+                        </p>
+                    </div>
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="5">0</div>
+                            <div class="stat-label">Лет опыта</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">+ Проектов</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">+ Клиентов</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="99">0</div>
+                            <div class="stat-label">% Успеха</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-glow"></span>
+                Навыки
+            </h2>
+            <div class="skills-container">
+                <div class="skills-column left">
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <span class="category-icon">🌐</span>
+                            Веб-разработка
+                        </h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML/CSS/JavaScript</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>React/Vue.js</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Node.js</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>TypeScript</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="88"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-center">
+                    <div class="skills-hexagon">
+                        <div class="hexagon-inner">
+                            <svg viewBox="0 0 100 100" class="hex-svg">
+                                <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#00ffff" stroke-width="0.5"/>
+                                <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="#ff00ff" stroke-width="0.5"/>
+                                <polygon points="50,15 85,32.5 85,67.5 50,85 15,67.5 15,32.5" fill="none" stroke="#00ff00" stroke-width="0.5"/>
+                            </svg>
+                            <div class="hex-center">
+                                <span>CODE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-column right">
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <span class="category-icon">📊</span>
+                            Трейдинг & C++
+                        </h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Технический анализ</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="92"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>C++</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Алготрейдинг</span>
+                                    <span class="skill-percent">87%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="87"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>API Бирж</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-glow"></span>
+                Проекты
+            </h2>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="trading">Трейдинг</button>
+                <button class="filter-btn" data-filter="web">Веб</button>
+                <button class="filter-btn" data-filter="cpp">C++</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="trading">
+                    <div class="card-image trading-1">
+                        <div class="card-overlay">
+                            <div class="card-icon">📈</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Торговый Бот</h3>
+                        <p>Автоматизированная торговая система с машинным обучением</p>
+                        <div class="card-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Demo</a>
+                            <a href="#" class="card-link">Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="card-image web-1">
+                        <div class="card-overlay">
+                            <div class="card-icon">🌐</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Crypto Dashboard</h3>
+                        <p>Панель управления для отслеживания криптовалют в реальном времени</p>
+                        <div class="card-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">WebSocket</span>
+                            <span class="tag">D3.js</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Demo</a>
+                            <a href="#" class="card-link">Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="cpp">
+                    <div class="card-image cpp-1">
+                        <div class="card-overlay">
+                            <div class="card-icon">⚡</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>HFT Engine</h3>
+                        <p>Высокочастотный торговый движок на C++</p>
+                        <div class="card-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">Low Latency</span>
+                            <span class="tag">FIX</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Demo</a>
+                            <a href="#" class="card-link">Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="trading">
+                    <div class="card-image trading-2">
+                        <div class="card-overlay">
+                            <div class="card-icon">🎯</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Signal Scanner</h3>
+                        <p>Сканер торговых сигналов с техническим анализом</p>
+                        <div class="card-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">TA-Lib</span>
+                            <span class="tag">Redis</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Demo</a>
+                            <a href="#" class="card-link">Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="card-image web-2">
+                        <div class="card-overlay">
+                            <div class="card-icon">💎</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>NFT Marketplace</h3>
+                        <p>Платформа для торговли NFT с интеграцией Web3</p>
+                        <div class="card-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Web3</span>
+                            <span class="tag">Solidity</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Demo</a>
+                            <a href="#" class="card-link">Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="cpp">
+                    <div class="card-image cpp-2">
+                        <div class="card-overlay">
+                            <div class="card-icon">🔧</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Order Matcher</h3>
+                        <p>Движок сведения ордеров с оптимизацией памяти</p>
+                        <div class="card-tags">
+                            <span class="tag">C++17</span>
+                            <span class="tag">Lock-free</span>
+                            <span class="tag">SIMD</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Demo</a>
+                            <a href="#" class="card-link">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-glow"></span>
+                Контакты
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Свяжитесь со мной</h3>
+                    <p>Готов к интересным проектам и сотрудничеству в сфере трейдинга и разработки</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="item-icon">📧</div>
+                            <div class="item-text">
+                                <span class="item-label">Email</span>
+                                <a href="mailto:sane4ka@example.com">sane4ka@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="item-icon">💬</div>
+                            <div class="item-text">
+                                <span class="item-label">Telegram</span>
+                                <a href="https://t.me/sane4ka">@sane4ka</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="item-icon">🐙</div>
+                            <div class="item-text">
+                                <span class="item-label">GitHub</span>
+                                <a href="https://github.com/sane4ka">github.com/sane4ka</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="item-icon">💼</div>
+                            <div class="item-text">
+                                <span class="item-label">LinkedIn</span>
+                                <a href="#">linkedin.com/in/sane4ka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Ваше имя</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Сообщение</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Отправить</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">SANE4KA</span>
+                    <p>Trader & Developer</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.523 0-10-4.477-10-10S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2024 SANE4KA. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
