@@ -796,7 +796,7 @@ body {
     bottom: 10px;
     background: 
         radial-gradient(circle at 30% 30%, rgba(0, 217, 255, 0.1), transparent 70%),
-        url('public/image.png') center center / cover no-repeat;
+        url('image.png') center center / cover no-repeat;
     background-position: center 20%;
     border-radius: 8px;
     overflow: hidden;
