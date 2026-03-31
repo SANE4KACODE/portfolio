@@ -569,7 +569,7 @@ class SoundEffects {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize particle system
     new ParticleSystem();
-    
+
     // Initialize typing effect
     const typingElement = document.querySelector('.typing-text');
     if (typingElement) {
@@ -581,39 +581,112 @@ document.addEventListener('DOMContentLoaded', () => {
             'Инноватор'
         ]);
     }
-    
+
     // Initialize navigation
     new Navigation();
-    
+
     // Initialize counter animation
     new CounterAnimation();
-    
+
     // Initialize skill bars
     new SkillBarsAnimation();
-    
+
     // Initialize projects filter
     new ProjectsFilter();
-    
+
     // Initialize contact form
     new ContactForm();
-    
+
     // Initialize parallax effect
     new ParallaxEffect();
-    
+
     // Initialize glitch hover
     new GlitchHover();
-    
+
+    // Initialize scroll progress bar
+    initScrollProgress();
+
+    // Initialize section reveal
+    initSectionReveal();
+
+    // Initialize button ripple effect
+    initButtonRipple();
+
     // Optional: Initialize sound effects
     // new SoundEffects();
-    
+
     // Add loaded class to body for animations
     document.body.classList.add('loaded');
-    
+
     // Console easter egg
     console.log('%c SANE4KA Portfolio ', 'background: #00ffff; color: #000; font-size: 20px; font-weight: bold; padding: 10px;');
     console.log('%c Trader & Developer ', 'color: #ff00ff; font-size: 14px;');
     console.log('%c Built with maximum web design power! ⚡ ', 'color: #00ff00; font-size: 12px;');
 });
+
+// ============================================
+// Scroll Progress Bar
+// ============================================
+function initScrollProgress() {
+    const progressBar = document.getElementById('scrollProgress');
+    if (progressBar) {
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            progressBar.style.width = scrolled + '%';
+        });
+    }
+}
+
+// ============================================
+// Section Reveal Animation
+// ============================================
+function initSectionReveal() {
+    const reveals = document.querySelectorAll('.section-title, .project-card, .skill-category, .stat-card, .contact-item');
+    
+    const revealOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-active');
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
+    });
+
+    reveals.forEach(el => {
+        el.classList.add('reveal');
+        revealOnScroll.observe(el);
+    });
+}
+
+// ============================================
+// Button Ripple Effect
+// ============================================
+function initButtonRipple() {
+    const buttons = document.querySelectorAll('.btn');
+    
+    buttons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            ripple.className = 'btn-ripple';
+            
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 600);
+        });
+    });
+}
 
 // ============================================
 // Smooth Scroll for Safari
